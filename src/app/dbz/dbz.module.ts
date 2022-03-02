@@ -7,6 +7,9 @@ import { PersonajesComponent } from './personajes/personajes.component';
 import { AgregarComponent } from './agregar/agregar.component';
 
 
+import { DbzService } from './services/dbz.service';
+
+
 
 @NgModule({
   declarations: [
@@ -20,6 +23,7 @@ import { AgregarComponent } from './agregar/agregar.component';
   ],
   exports:[
     MainPageComponent
-  ]
+  ],
+  providers: [DbzService]//Esto es para que se pueda inyectar el servicio en otro lugar
 })
 export class DbzModule { }
